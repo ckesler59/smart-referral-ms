@@ -1,2 +1,2 @@
-# smart-referral-ms
-Smart Referral with micro services implementation
+# smart-referral-ms-db
+Smart Referral database with separate micro services user accounts.  All microservices will use the same database but will access that database through separate user accounts.  Consequently, each microservices only has access to the tables that are specific to its role. We could have actual separate databases for each microservice running in the same database server machine.  However, there are cases, particularly for provider search where complex queries will be necessary that will join across provider, taxonomy, and location tables -- order to find providers with specific specialites that are within a specified distance of a given location.
