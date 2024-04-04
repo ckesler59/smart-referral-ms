@@ -1,0 +1,16 @@
+## using compose V2, no file format version required
+name: smart-referral
+
+services:
+  mysql-server:
+    build: .
+    env_file: .env
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    networks:
+      - backend
+
+networks:
+  backend:
